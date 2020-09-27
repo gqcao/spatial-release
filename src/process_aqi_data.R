@@ -9,7 +9,7 @@ library(rgdal)
 library(KernSmooth)
 library(matrixStats)
 
-DATA_PATH = "/home/gcao/Datasets/air_pollution/"
+DATA_PATH = "../data/"
 DATE_LIST <- sapply(seq(as.Date("2016/01/01"), by = "day", length.out = 366), function(a) format(a, "%Y-%m-%d")) # One week in Sept 2016
 
 

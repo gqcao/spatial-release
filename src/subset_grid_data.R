@@ -12,7 +12,8 @@ subset_grid_data <- function(data){
     return(newdata)
 }
 
-DATA_PATH = "/home/gcao/Datasets/air_pollution/"
+# Download the data from https://ofmpub.epa.gov/rsig/rsigserver?data/FAQSD/inputs/ds_input_cmaq_pm25_2016.zip
+DATA_PATH = "../data/"
 data <- read.csv(paste(DATA_PATH, 'ds.input.cmaq.pm25.2016.csv', sep=''))
 newdata <- subset_grid_data(data)
 write.csv(newdata, paste(DATA_PATH, 'ds.input.cmaq.pm25.2016_cal.csv', sep=''), row.names=FALSE)

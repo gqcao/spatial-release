@@ -47,7 +47,7 @@ rev_geocoding <- function(coords_df, query_format='geojson', server='local'){
     write.csv(geocode, 'city_geocode.csv', row.names=FALSE)
 }
 
-DATA_PATH = '/home/gcao/Datasets/air_pollution/'
+DATA_PATH = '../data/'
 coords_df = read.csv(paste(DATA_PATH, 'city.csv', sep=''))
 coords_df <- coords_df[!duplicated(coords_df[,2:3]),]
 rev_geocoding(coords_df, 'geojson', 'local')
